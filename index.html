@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXCHANGE</title>
+    <link rel="stylesheet" href="./node_modules/flag-icons/css/flag-icons.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head> 
+<body>
+    <div id="container">
+        <header>
+            <h1> EXCHANGE </h1>
+            <!--h2 id="info--base-rate"></h2-->
+            <nav>
+                <form name="conversion_frm" method="get" id="frm">
+                    <input type="text" name="quantity" id="quantity" value="1" />
+                    <img id="base-rate-flag" src="./node_modules/flag-icons/flags/4x3/us.svg"/>
+                    <select name="base_rate" id="base-rate-select">
+                        <!--option value="USD" selected>USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="JPY">JPY</option>
+                            <option value="CAD">CAD</option>
+                            <option value="ARS">ARS</option-->
+                    </select>
+                    <button id="convert-btn" type="submit">CONVERT</button>
+                </form>
+            </nav>
+        </header>
+        <main>
+            <section id="rates--list">                
+                
+            </section>
+        </main>
+        <footer>
+            Exchange - Gonzalo Cabrera for r/argentinaPrograma
+        </footer>
+
+    </div>
+        
+
+
+<script src="./src/index.js" type="module"></script>
+</body>
+</html>

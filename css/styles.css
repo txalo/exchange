@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    box-sizing: border-box;   
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+#container{
+    max-width: 480px;
+    margin: 20px auto;
+    background-color: #000;
+    color: #fff;
+    font-weight: 300;
+    border-radius: 1.5em;    
+}
+
+header{
+    text-align: center;
+    padding: 0 1rem;
+}
+
+header h1{    
+    font-weight: normal;
+}
+#frm{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#frm #quantity{
+    background: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    padding: 4px 8px;
+    color: #fff;
+    margin: 0 1em;
+    text-align: right;
+    font-size: 1.2em;
+}
+
+#frm #quantity:focus{
+    outline: none;
+    border-bottom: none;
+    box-shadow: 0px 3px rgba(255, 255, 255,0.4);
+    
+}
+
+#base-rate-flag{
+    height: 1.5em;
+    border-radius: 3px;   
+}
+#frm select{
+    border:none;
+    background: none;
+    color: #fff;
+    margin: 0 8px;
+}
+
+#frm select:focus{
+    border:none;
+    background: #000;    
+}
+
+#frm button{
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+
+#frm button:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+
+/*RATES LIST*/
+main{
+    width:100%;
+    background-color: #ddd;
+    margin-top: 1rem;
+    padding: .75rem;
+    color: black;
+    border-radius: 1em;
+}
+
+main #rates--list{
+    list-style: none;
+}
+
+.rates--list-item{
+    background-color: #fff;
+    margin: 1rem .75rem;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    box-shadow: 2px 2px 8px rgba(126, 126, 126,0.8); 
+    display: flex;
+    justify-content: space-between;  
+    align-items: baseline; 
+}
+
+.flag-img{
+    border-radius: 2px;
+    height: 1.3em;
+    margin-right: 4px;
+    vertical-align: sub;
+}
+
+.currency-code{
+    color: #0029f7;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.currency-name{
+    color: #777;    
+}
+
+.currency-symbol{
+    color: #777;    
+}
+
+#ANG, #XAF, #XCD, #XOF, #XPF, #XDR{
+    display:none;
+}
+
+footer{
+    padding: 8px;
+    color: #ddd;
+    font-size: .75em;
+    text-align:center;
+    font-weight: 300;
+}
