@@ -86,10 +86,7 @@ main{
     padding: .75rem;
     color: black;
     border-radius: 1em;
-}
-
-main #rates--list{
-    list-style: none;
+    display: none;
 }
 
 .rates--list-item{
