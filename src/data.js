@@ -1,4 +1,4 @@
-export let currency_data = {
+export const CURRENCY_DATA = {
   "AED": {
     "name": "UAE Dirham",
     "fractionSize": 2,

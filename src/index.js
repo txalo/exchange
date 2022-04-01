@@ -1,13 +1,12 @@
-import {currency_data} from './data.js'
+import {CURRENCY_DATA} from './data.js'
 
 
 const base_rates = ["USD","JPY","ARS","EUR","AUD","RUB","BRL","GBP","CAD","CNY"];
-const FLAGS_DIR = "../node_modules/flag-icons/flags/4x3/";
+const FLAGS_DIR = "https://raw.githubusercontent.com/lipis/flag-icons/4f420bdd2e954f6da11220f1136fa181ed7019e7/flags/4x3/";
 const API_URL = "https://v6.exchangerate-api.com/v6/3e5663daf097fa61633ab4d0/";
 
 const $baseRatesSelect = document.querySelector("#base-rate-select");
 const $ratesList = document.querySelector("#rates--list");
-const $BTNConvert = document.querySelector("#convert-btn");
 const $FRM = document.querySelector("#frm");
 let base = document.querySelector("#frm")["base-rate"];
   
@@ -37,10 +36,10 @@ function loadConvertionRates(conversionData, quantity){
     convData.innerHTML = `
     <div>
       <img src="${FLAGS_DIR+k.slice(0,2).toLowerCase()}.svg" class="flag-img" />
-      <span class="currency-code">${k}</span> <span class="currency-name">${(currency_data[k] && currency_data[k].name)}</span> 
+      <span class="currency-code">${k}</span> <span class="currency-name">${(CURRENCY_DATA[k] && CURRENCY_DATA[k].name)}</span> 
     </div> 
     <div>
-      <span class="currency-symbol">${(currency_data[k] && currency_data[k].symbol.grapheme)}</span> ${(v * quantity).toFixed(2)} 
+      <span class="currency-symbol">${(CURRENCY_DATA[k] && CURRENCY_DATA[k].symbol.grapheme)}</span> ${(v * quantity).toFixed(2)} 
     </div>
     `
     $ratesList.appendChild(convData);
