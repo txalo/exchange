@@ -39,7 +39,7 @@ function loadConvertionRates(conversionData, quantity){
       <span class="currency-code">${k}</span> <span class="currency-name">${(CURRENCY_DATA[k] && CURRENCY_DATA[k].name)}</span> 
     </div> 
     <div>
-      <span class="currency-symbol">${(CURRENCY_DATA[k] && CURRENCY_DATA[k].symbol.grapheme)}</span> ${(v * quantity).toFixed(2)} 
+      <span class="currency-symbol">${(CURRENCY_DATA[k] && CURRENCY_DATA[k].symbol.grapheme)}</span> <span class="value">${(v * quantity).toFixed(2)}</span> 
     </div>
     `
     $ratesList.appendChild(convData);
