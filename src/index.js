@@ -18,7 +18,7 @@ const API_URL = 'https://v6.exchangerate-api.com/v6/3e5663daf097fa61633ab4d0/';
 const $baseRatesSelect = document.querySelector('#base-rate-select');
 const $ratesList = document.querySelector('#rates--list');
 const $FRM = document.querySelector('#frm');
-let base = document.querySelector('#frm')['base-rate'];
+const base = document.querySelector('#frm')['base-rate'];
 
 function loadBaseRates(baseRatesSelect, baseRatesList) {
   baseRatesList.forEach((rate) => {
@@ -38,7 +38,7 @@ function loadConvertionRates(conversionData, quantity) {
   $ratesList.innerHTML = '';
   document.querySelector('main').style.display = 'block';
   Object.entries(conversionData.conversion_rates).forEach(([k, v]) => {
-    let convData = document.createElement('article');
+    const convData = document.createElement('article');
     convData.id = k;
     convData.className = 'rates--list-item';
     convData.innerHTML = `
@@ -74,8 +74,8 @@ function initialize() {
   $baseRatesSelect.addEventListener(
     'change',
     (e) => (
-      document.querySelector('#base-rate-flag').src=`${FLAGS_DIR + e.target.value.slice(0, 2).toLowerCase()}.svg`
-    )
+      document.querySelector('#base-rate-flag').src = `${FLAGS_DIR + e.target.value.slice(0, 2).toLowerCase()}.svg`
+    ),
   );
 }
 
