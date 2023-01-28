@@ -4,25 +4,27 @@ function loadConvertionRates(currencyData, conversionData, quantity) {
   $ratesList.innerHTML = '';
   document.querySelector('main').style.display = 'block';
   Object.entries(conversionData.conversion_rates).forEach(([k, v]) => {
-    const convData = document.createElement('article');
-    convData.id = k;
-    convData.className = 'rates--list-item';
-    convData.innerHTML = `
-    <div>
-      <img src='${FLAGS_DIR + k.slice(0, 2).toLowerCase()}.svg' class='flag-img' />
-      <span class='currency-code'>${k}</span> 
-      <span class='currency-name'>
-      ${currencyData[k] && currencyData[k].name}
-      </span> 
-    </div> 
-    <div>
-      <span class='currency-symbol'>
-      ${currencyData[k] && currencyData[k].symbol.grapheme}
-      </span> 
-      <span class='value'>${(v * quantity).toFixed(2)}</span> 
-    </div>
-    `;
-    $ratesList.appendChild(convData);
+    if (currencyData[k]) {
+      const convData = document.createElement('article');
+      convData.id = k;
+      convData.className = 'rates--list-item';
+      convData.innerHTML = `
+      <div>
+        <img src='${FLAGS_DIR + k.slice(0, 2).toLowerCase()}.svg' class='flag-img' />
+        <span class='currency-code'>${k}</span> 
+        <span class='currency-name'>
+          ${currencyData[k] && currencyData[k].name}
+        </span> 
+      </div> 
+      <div>
+        <span class='currency-symbol'>
+          ${currencyData[k] && currencyData[k].symbol.grapheme}
+        </span> 
+        <span class='value'>${(v * quantity).toFixed(2)}</span> 
+      </div>
+      `;
+      $ratesList.appendChild(convData);
+    }
   });
 }
 
