@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cypress-run": "cypress open",
-    "server-start": "http-server -p 5500"  
+    "server-start": "http-server -p 5500 -c-1"  
   },
   "keywords": [],
   "author": "",
