@@ -84,7 +84,7 @@ main{
     width:100%;
     background-color: #ddd;
     margin-top: 1rem;
-    padding: .75rem;
+    padding: .25rem;
     color: black;
     border-radius: 1em;
     display: none;
@@ -92,8 +92,8 @@ main{
 
 .rates--list-item{
     background-color: #fff;
-    margin: 1rem .75rem;
-    padding: .5rem 1rem;
+    margin: 1rem .5rem;
+    padding: .5rem .5rem;
     border-radius: .5rem;
     box-shadow: 2px 2px 8px rgba(126, 126, 126,0.8); 
     display: flex;
@@ -115,7 +115,8 @@ main{
 }
 
 .currency-name{
-    color: #777;    
+    color: #777;
+    font-size: .75em;    
 }
 
 .currency-symbol{
@@ -137,6 +138,10 @@ footer{
 @media only screen and (min-width: 768px) {
     #container{
         width: 576px;        
+    }
+
+    .currency-name{    
+        font-size: 1em;    
     }
 }
 
